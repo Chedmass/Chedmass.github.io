@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chedmass</title>
+        <link rel="icon" type="image/x-icon" href="icon.ico">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+
+        <script>
+            var exchangeData;
+        </script>
+        <script 
+            src="apirequest.js">
+        </script>
+        <script 
+            src="currencyexchange.js">
+        </script>
+    </head>
+    <hr>
+        <nav>
+            <hr>
+            <a href="certificates.html">Documents</a>
+            <hr>
+            <a href="index.html">About</a>
+            <hr>
+            <a href="links.html">Links</a>
+            <hr>
+        </nav>
+    <hr>
+    <body>
+
+        <section>
+            <p>
+            Up-to-date exchange rates to UAH for 10 most used currencies according to <a href="https://www.ig.com/en/trading-strategies/what-are-the-top-10-most-traded-currencies-in-the-world-200115">ig.com</a>.
+            </p>
+            <table id="rates" border="1">
+            </table>
+            <table>
+                <p>Enter the amount and choose currency to convert into UAH.</p>
+                <tr>
+                    <th><input id="currencyA" name="currencyA" max="99999999.99" maxlength="4" size="4" type="number" onchange="checkTextarea()"></th>
+                    <th><select name="currencies" id="currencies" onchange="checkTextarea()"></select></th>
+                    
+                </tr>
+                <tr>
+                <th><input id="currencyB" name="currencyB" rows="1" cols="30" maxlength="30" readonly></th>
+                <th>UAH</th>
+                </tr>
+            </table>
+            <p>
+            Exchange rates are retrieved from <a href="https://currencyfreaks.com">currencyfreaks</a> api.
+            </p>
+        </section>
+    </body>
+    <footer>
+        <script src="randomQuote.js"></script>
+        <table>
+            <tr><th></th> <th>Contacts</th></tr>
+            <tr>
+                <th>Phone:</th><th>+380992207783</th><th>Telegram:</th>
+                <th><a href="https://t.me/Chedmass">@Chedmass</a></th>
+            </tr>
+            <tr>
+                <th>Email:</th><th>dmytro.chebotarov.v@gmail.com</th>
+                <th>Email:</th><th><a href="mailto:dmytro.chebotarov.v@gmail.com">dmytro.chebotarov.v@gmail.com</a></th>
+            </tr>
+        </table>
+        <hr id="border0">
+        <table>
+            <tr><th>Random quote</th></tr>
+            <tr><th id="Quote">  If didn't load <th></tr>
+            <tr><th id="Author">  Please, reload the page  <th></tr>
+        </table>
+    </footer>
+</html>
